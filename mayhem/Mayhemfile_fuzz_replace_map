@@ -1,0 +1,9 @@
+project: savantenvs/unordered_dense
+target: fuzz_replace_map
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_replace_map/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_replace_map
+    libfuzzer: true
+    timeout: 10
