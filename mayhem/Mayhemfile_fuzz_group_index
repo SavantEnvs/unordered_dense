@@ -1,0 +1,9 @@
+project: savantenvs/unordered_dense
+target: fuzz_group_index
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_group_index/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_group_index
+    libfuzzer: true
+    timeout: 10

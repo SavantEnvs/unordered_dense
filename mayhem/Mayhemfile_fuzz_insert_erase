@@ -1,0 +1,9 @@
+project: savantenvs/unordered_dense
+target: fuzz_insert_erase
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_insert_erase/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_insert_erase
+    libfuzzer: true
+    timeout: 10
